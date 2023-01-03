@@ -1,0 +1,44 @@
+﻿@model IEnumerable<CustomerWebMVC.Models.CustomModel>;
+@*@{
+    var custlist = Model;
+}*@
+
+<h3>Show Customer Details</h3>
+<hr />
+
+<div class="text-center">
+    <h1 class="display-4">Customer List</h1>
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Address</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.CustomerName</td>
+                <td>@item.CustomAge</td>
+                <td>@item.CustomerAddress</td>
+                <td>@item.CustomerPhone</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@*
+
+    @*<form action="~/.../AddCustomer" method="post">
+        <input type="submit" value="Send" />
+    </form>
+*@
+
